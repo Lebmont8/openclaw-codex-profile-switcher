@@ -1,0 +1,10 @@
+node_modules/
+*.tgz
+coverage/
+.DS_Store
+.env
+.env.*
+*.sqlite
+*.db
+auth-profiles.json
+auth-state.json

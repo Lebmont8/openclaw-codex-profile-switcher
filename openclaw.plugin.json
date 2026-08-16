@@ -1,0 +1,54 @@
+{
+  "id": "codex-profiles",
+  "name": "Codex Profiles",
+  "description": "Switch Codex OAuth profiles while preserving automatic failover.",
+  "version": "0.1.0",
+  "activation": {
+    "onStartup": true
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "profiles"
+    ],
+    "properties": {
+      "provider": {
+        "type": "string",
+        "default": "openai"
+      },
+      "profiles": {
+        "type": "array",
+        "minItems": 2,
+        "maxItems": 8,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "id"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 40
+            }
+          }
+        }
+      },
+      "cliPath": {
+        "type": "string"
+      },
+      "commandTimeoutMs": {
+        "type": "integer",
+        "minimum": 1000,
+        "maximum": 300000,
+        "default": 60000
+      }
+    }
+  }
+}

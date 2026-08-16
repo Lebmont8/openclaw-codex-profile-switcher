@@ -1,0 +1,41 @@
+{
+  "name": "openclaw-codex-profile-switcher",
+  "version": "0.1.0",
+  "description": "Switch between multiple Codex OAuth profiles from OpenClaw without disabling automatic failover.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Lebmont8",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lebmont8/openclaw-codex-profile-switcher.git"
+  },
+  "keywords": [
+    "openclaw",
+    "codex",
+    "oauth",
+    "profile-switcher",
+    "telegram"
+  ],
+  "files": [
+    "index.js",
+    "src/",
+    "compat/",
+    "openclaw.plugin.json",
+    "README.md",
+    "SECURITY.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check index.js && node --check src/*.js && node --check compat/*.js && node --check compat/*.mjs",
+    "verify": "npm run check && npm test"
+  },
+  "peerDependencies": {
+    "openclaw": ">=2026.7.1"
+  },
+  "openclaw": {
+    "extensions": [
+      "./index.js"
+    ]
+  }
+}
