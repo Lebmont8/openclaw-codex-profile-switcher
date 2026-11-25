@@ -11,7 +11,7 @@ that account reaches its limit.
 ## Features
 
 - `/profiles` menu with Telegram inline buttons
-- any number of configured profiles from 2 to 8
+- 2 to 8 configured Codex OAuth profiles
 - per-agent OpenClaw auth order
 - session-level preferred profile
 - automatic fallback to the remaining configured profiles
